@@ -1,0 +1,40 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "projDafa"
+		},
+		"AzureDataLakeStorage1_ls_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_ls_connectionString": {
+			"value": "Integrated Security=False;Encrypt=True;Connection Timeout=30;Data Source=proj-server.database.windows.net;Initial Catalog=proj-db;User ID=dan"
+		},
+		"AmazonS31_ls_properties_typeProperties_accessKeyId": {
+			"value": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1_ls",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "awsaccesskey"
+			}
+		},
+		"AzureDataLakeStorage1_ls_properties_typeProperties_url": {
+			"value": "https://projectsa.dfs.core.windows.net/"
+		},
+		"AzureDatabricks1_ls_properties_typeProperties_existingClusterId": {
+			"value": "0302-115523-p0tjdba6"
+		},
+		"AzureKeyVault1_ls_properties_typeProperties_baseUrl": {
+			"value": "https://projkvnew.vault.azure.net/"
+		},
+		"trigger1_properties_pipeline1_parameters_filename": {
+			"value": "@triggerBody().filename"
+		},
+		"trigger1_properties_typeProperties_scope": {
+			"value": "/subscriptions/f2576c3d-5fc4-4fa0-9a51-7c72d84cc4b0/resourceGroups/proj-rg/providers/Microsoft.Storage/storageAccounts/projectsa"
+		}
+	}
+}
