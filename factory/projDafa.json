@@ -1,0 +1,9 @@
+{
+	"name": "projDafa",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "bef96d84-5781-4ec9-96df-a302ef002aa8",
+		"tenantId": "28f17ad2-29c7-482d-9410-3e5029bb9b0d"
+	}
+}

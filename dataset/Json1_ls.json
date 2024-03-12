@@ -1,0 +1,43 @@
+{
+	"name": "Json1_ls",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AmazonS31_ls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AmazonS3Location",
+				"bucketName": "projsalesbucket",
+				"folderPath": "order_items",
+				"fileName": "order_items.json"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"order_item_id": {
+					"type": "integer"
+				},
+				"order_item_order_id": {
+					"type": "integer"
+				},
+				"order_item_product_id": {
+					"type": "integer"
+				},
+				"order_item_quantity": {
+					"type": "integer"
+				},
+				"order_item_subtotal": {
+					"type": "number"
+				},
+				"order_item_product_price": {
+					"type": "number"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
